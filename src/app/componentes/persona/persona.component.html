@@ -1,0 +1,42 @@
+<h3>Listado de personas</h3>
+
+<p>Estudiantes de la EAM</p>
+
+<p>
+  Nombre: {{ nombre }}
+  Identificación: {{ identificacion }}
+  Género: {{ genero }}
+  Edad: {{ getEdad() + 2 }}
+  Profesión: {{ profesion }}
+</p>
+
+<!--<label>Profesión:</label>
+<input type="text" class="form-control"
+       (input)="modificarProfesion($event)">-->
+
+<label>Profesión:</label>
+<input type="text" class="form-control"
+       [(ngModel)] = "profesion" >
+
+<br>
+<div (keyup)="0">
+  <label>Contador: </label>
+  <input type="text" class="form-control"
+         #entrada>
+  {{ entrada.value }}
+</div>
+
+<hr>
+
+<div class="row">
+  <div class="col">
+    <h2>Personas</h2>
+    <button class="btn btn-outline-danger"
+            [disabled]="deshabilitar"
+    (click)="agregarPersona()">Agregar</button>
+    <br>
+    {{ mensaje }}
+  </div>
+</div>
+
+
