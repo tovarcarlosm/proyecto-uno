@@ -35,7 +35,10 @@
             [disabled]="deshabilitar"
     (click)="agregarPersona()">Agregar</button>
     <br>
-    {{ mensaje }}
+    <p *ngIf="mostrar; else sinRegistro"> {{ mensaje }} </p>
+    <ng-template #sinRegistro>
+      <p>No hay ningún registro</p>
+    </ng-template>
   </div>
 </div>
 

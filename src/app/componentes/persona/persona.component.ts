@@ -16,12 +16,15 @@ export class PersonaComponent {
   deshabilitar: boolean = false;
   mensaje: string = "Listado vacío";
 
+  mostrar: boolean = false;
+
   // getters and setters
   getEdad():number{
     return this.edad;
   }
 
   agregarPersona(){
+    this.mostrar = true;
     this.mensaje = "Persona agregada";
   }
 
