@@ -1,0 +1,16 @@
+<form>
+  <div class="mb-3">
+    <label for="nombre">Nombre</label>
+    <input type="text" id="nombre" name="nombre"
+           class="form-control" placeholder="Nombre"
+           [(ngModel)]="nombreInput">
+  </div>
+  <div class="mb-3">
+    <label for="apellido">Apellido</label>
+    <input type="text" id="apellido" name="apellido"
+           class="form-control" placeholder="Apellido"
+           [(ngModel)]="apellidoInput">
+  </div>
+  <button class="btn btn-primary"
+          (click)="agregar()">Agregar</button>
+</form>

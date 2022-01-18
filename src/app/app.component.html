@@ -1,6 +1,20 @@
 <div class="container mt-5 m-5">
-  <h1>Bienvenidos al curso de Angular</h1>
-  <!--<app-persona></app-persona>-->
-  <app-estudiante></app-estudiante>
+  <h1>{{ titulo }}</h1>
+
+    <div class="col">
+      <h2>Registrar Estudiante</h2>
+      <app-formulario
+        (estudianteFormulario)="actualizarArreglo($event)">
+
+      </app-formulario>
+    </div>
+    <br>
+    <hr>
+    <app-estudiante
+    *ngFor="let estudianteElemento of estudiantes; let i = index"
+    [estudiante]="estudianteElemento"
+    [indice]="i" >
+
+    </app-estudiante>
 </div>
 
